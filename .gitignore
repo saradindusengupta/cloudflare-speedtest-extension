@@ -28,4 +28,4 @@ yarn-error.log*
 .vercel
 
 # VS Code
-.vscode/*
+.vscode/
