@@ -1,4 +1,4 @@
-# CloudflareSpeedtest Extension
+# Cloudflare Speedtest Extension
 
 A Chrome extension that provides a compact toolbar popup for running Cloudflare-powered internet speed tests with one click.
 
@@ -84,7 +84,6 @@ The extension stores only the last two completed test results in `chrome.storage
 
 ### Architecture
 
-
 This project uses:
 
 - **Chrome Extension Manifest V3**
@@ -98,8 +97,6 @@ This project uses:
 - No analytics or tracking
 - Only communicates with Cloudflare's speed test servers (`https://speed.cloudflare.com/*`)
 - [Privacy Policy](PRIVACY.md)
-
-
 
 ## License
 
