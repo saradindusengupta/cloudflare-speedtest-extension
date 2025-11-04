@@ -10,7 +10,7 @@
     <main>
       <div class="header-row">
         <h1>Cloudflare Speed test</h1>
-        <div id="progress-container" class="circular-progress" hidden title="Test progress">
+        <div id="progress-container" class="circular-progress" hidden title="Test progress" aria-label="Test progress">
           <svg viewBox="0 0 36 36" class="circular-chart" aria-hidden="true">
             <path class="circle-bg"
               d="M18 2.0845
@@ -31,8 +31,8 @@
       <div class="subheader-link">
         <a href="https://speed.cloudflare.com/" target="_blank" rel="noopener noreferrer" aria-label="Open speed.cloudflare.com in a new tab">https://speed.cloudflare.com/</a>
       </div>
-      <p id="status">Ready</p>
-      <button id="btn-test" type="button" aria-live="polite">Test Speed</button>
+  <p id="status">Ready</p>
+  <button id="btn-test" type="button" aria-live="polite" aria-label="Start speed test">Test Speed</button>
       <section id="result" aria-live="polite" hidden>
           <div class="metrics-grid">
             <div class="metric-item primary">
@@ -67,7 +67,7 @@
               <div class="metric-label">IP Address</div>
               <div class="metric-value">
                 <span id="ipaddr">—</span>
-                <button id="btn-copy-ip" type="button" class="copy-btn" title="Copy IP" aria-label="Copy IP">
+                <button id="btn-copy-ip" type="button" class="copy-btn" title="Copy IP" aria-label="Copy IP address to clipboard">
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
     <rect x="4" y="4" width="10" height="12" rx="2" stroke="#333" stroke-width="1.5" fill="none"/>
     <rect x="2" y="2" width="10" height="12" rx="2" stroke="#333" stroke-width="1.5" fill="none"/>
@@ -80,7 +80,7 @@
       <section id="history" aria-label="Recent results">
         <div class="row">
           <h2>History</h2>
-          <button id="btn-clear" type="button" class="linklike" title="Clear history">Clear</button>
+          <button id="btn-clear" type="button" class="linklike" title="Clear history" aria-label="Clear speed test history">Clear</button>
         </div>
         <ul id="history-list" aria-live="polite"></ul>
       </section>
