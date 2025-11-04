@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Speed Test</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header-row">
+        <h1>Speed Test</h1>
+        <div id="progress-container" class="circular-progress" hidden title="Test progress">
+          <svg viewBox="0 0 36 36" class="circular-chart" aria-hidden="true">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path id="progress-circle" class="circle"
+              stroke-dasharray="0, 100"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="20.5" class="percentage" id="progress-text">0%</text>
+          </svg>
+          <div id="progress-text-below" class="progress-text" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="subheader-link">
+        <a href="https://speed.cloudflare.com/" target="_blank" rel="noopener noreferrer" aria-label="Open speed.cloudflare.com in a new tab">https://speed.cloudflare.com/</a>
+      </div>
+      <p id="status">Ready</p>
+      <button id="btn-test" type="button" aria-live="polite">Test Speed</button>
+      <section id="result" aria-live="polite" hidden>
+          <div class="metrics-grid">
+            <div class="metric-item primary">
+              <div class="metric-label">Download</div>
+              <div class="metric-value">
+                <span id="download">—</span>
+                <span class="unit">Mbps</span>
+              </div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">Upload</div>
+              <div class="metric-value">
+                <span id="upload">—</span>
+                <span class="unit">Mbps</span>
+              </div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">Latency</div>
+              <div class="metric-value">
+                <span id="latency">—</span>
+                <span class="unit">ms</span>
+              </div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">Jitter</div>
+              <div class="metric-value">
+                <span id="jitter">—</span>
+                <span class="unit">ms</span>
+              </div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">IP Address</div>
+              <div class="metric-value">
+                <span id="ipaddr">—</span>
+                <button id="btn-copy-ip" type="button" class="copy-btn" title="Copy IP" aria-label="Copy IP">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+    <rect x="4" y="4" width="10" height="12" rx="2" stroke="#333" stroke-width="1.5" fill="none"/>
+    <rect x="2" y="2" width="10" height="12" rx="2" stroke="#333" stroke-width="1.5" fill="none"/>
+  </svg>
+</button>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section id="history" aria-label="Recent results">
+        <div class="row">
+          <h2>History</h2>
+          <button id="btn-clear" type="button" class="linklike" title="Clear history">Clear</button>
+        </div>
+        <ul id="history-list" aria-live="polite"></ul>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
